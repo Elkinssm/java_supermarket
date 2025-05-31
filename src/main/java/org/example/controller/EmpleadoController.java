@@ -20,38 +20,31 @@ public class EmpleadoController {
         this.view = new EmpleadoView();
     }
 
-
-
     public void iniciar() {
         int opcion;
         do {
             view.mostrarMenu();
             opcion = view.leerOpcion();
-            switch (opcion) {
-                case 1:
-                    registrarEmpleado();
-                    break;
-                case 2:
-                    consultarPorCargo();
-                    break;
-                case 3:
-                    mostrarTodos();
-                    break;
-                case 4:
-                    actualizarEmpleado();
-                    break;
-                case 5:
-                    eliminarEmpleado();
-                    break;
-                case 0:
-                    view.mostrarMensaje("Exiting... Goodbye!");
-                    logger.info("User selected Exit. Shutting down app.");
-                    break;
-                default:
-                    view.mostrarMensaje("Invalid option. Try again.");
-                    logger.warn("Invalid menu option: {}", opcion);
-            }
+            manejarOpcion(opcion);
         } while (opcion != 0);
+    }
+
+    private void manejarOpcion(int opcion) {
+        switch (opcion) {
+            case 1 -> registrarEmpleado();
+            case 2 -> consultarPorCargo();
+            case 3 -> mostrarTodos();
+            case 4 -> actualizarEmpleado();
+            case 5 -> eliminarEmpleado();
+            case 0 -> {
+                view.mostrarMensaje("Exiting... Goodbye!");
+                logger.info("User selected Exit. Shutting down app.");
+            }
+            default -> {
+                view.mostrarMensaje("Invalid option. Try again.");
+                logger.warn("Invalid menu option: {}", opcion);
+            }
+        }
     }
 
     public void registrarEmpleado() {
