@@ -1,3 +1,0 @@
-2025-05-31 11:02:38 DEBUG [o.e.controller.EmpleadoController] - Register input: name='', role='', date='', salary=''
-2025-05-31 11:02:38 ERROR [org.example.service.EmpleadoService] - Invalid role or format: No enum constant org.example.model.Role.
-2025-05-31 11:02:38 ERROR [o.e.controller.EmpleadoController] - Failed to create employee: name='', role=''.

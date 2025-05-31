@@ -25,4 +25,4 @@ INSERT INTO empleado (nombre, cargo, fecha_contratacion, salario) VALUES
                                                                       ('Luis Perez',      'Supervisor', '2021-11-01', 1000000.00),
                                                                       ('Ana Martinez',    'Gerente',    '2020-06-10', 2500000.00),
                                                                       ('Carlos Sanchez',  'Cajero',     '2023-01-20', 1250000.00),
-                                                                      ('Laura Rodríguez', 'Bodega',     '2022-09-05', 1050000.00);
+                                                                      ('Laura Rodriguez', 'Bodega',     '2022-09-05', 1050000.00);
