@@ -32,11 +32,6 @@ class EmpleadoControllerTest {
     }
 
     @Test
-    void pruebaBasica() {
-        assertEquals(4, 2 + 2, "2 + 2 debe ser igual a 4");
-    }
-
-    @Test
     void testRegistrarEmpleado_exito() {
         when(viewMock.leerDatosEmpleadoParaCrear()).thenReturn(new String[] { "Juan", "Cajero", "2024-01-01", "1000" });
         when(serviceMock.crearEmpleado(anyString(), anyString(), anyString(), anyString())).thenReturn(true);
